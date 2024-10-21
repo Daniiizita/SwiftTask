@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Novo Registro de Trabalho - SwiftTask{% endblock %}
+
+{% block content %}
+    <h1>Novo Registro de Trabalho</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Criar Registro</button>
+    </form>
+{% endblock %}

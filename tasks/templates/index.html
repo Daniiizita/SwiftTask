@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Página Inicial - SwiftTask{% endblock %}
+
+{% block content %}
+    <h2>Bem-vindo ao SwiftTask</h2>
+    <p>Escolha uma das opções abaixo para começar:</p>
+    <ul>
+        <li><a href="{% url 'task_create' %}">Criar Nova Tarefa</a></li>
+        <li><a href="{% url 'worklog_create' %}">Criar Registro de Trabalho</a></li>
+        <li><a href="{% url 'start_worklog' task_id=1 %}">Iniciar Trabalho (Exemplo com ID=1)</a></li>
+        <li><a href="{% url 'stop_worklog' worklog_id=1 %}">Parar Trabalho (Exemplo com ID=1)</a></li>
+    </ul>
+{% endblock %}

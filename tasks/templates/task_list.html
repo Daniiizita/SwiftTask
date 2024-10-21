@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Tarefas - SwiftTask{% endblock %}
+
+{% block content %}
+    <h1>Lista de Tarefas</h1>
+    <ul>
+        {% for task in tarefas %}
+            <li>
+                {{ task.name }} - {{ task.description }}
+                <form action="{% url 'start_worklog' task.id %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Iniciar</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'task_create' %}">Criar Nova Tarefa</a>
+
+    <h1>Registros de Trabalho</h1>
+    <ul>
+        {% for log in worklogs %}
+            <li>
+                {{ log.task.name }} - {{ log.duration }}
+                {% if not log.end_time %}
+                    <form action="{% url 'stop_worklog' log.id %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit">Parar</button>
+                    </form>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

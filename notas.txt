@@ -1,0 +1,1 @@
+mexer na view do tasks, ver como usar o CreateView DO dJANGO lá

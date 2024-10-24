@@ -75,4 +75,4 @@ SwiftTask é uma aplicação web desenvolvida em Django para controle de tarefas
 
 ## Contato
 
-Para dúvidas ou mais informações, entre em contato pelo e-mail: [goncalvesdani54@tianalista.onmicrosoft.com](mailto:goncalvesdani54@tianalista.onmicrosoft.com)
+Para dúvidas ou mais informações, entre em contato pelo e-mail: [goncalvesdani54@gmail.com](mailto:goncalvesdani54@gmail.com)
